@@ -1,0 +1,28 @@
+{
+    "name": "nikkiii/flysystem-acd",
+    "description": "Flysystem Interface for Amazon Cloud Drive",
+    "type": "library",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Nikki",
+            "email": "nikki@nikkii.us"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"Nikkii\\Flysystem\\ACD\\": "src"
+		}
+	},
+	"repositories" : [
+		{
+			"type": "vcs",
+			"url": "https://github.com/nikkiii/clouddrive-php"
+		}
+	],
+    "require": {
+        "php": ">=5.4.0",
+		"league/flysystem": "^1.0",
+        "alex-phillips/clouddrive": "dev-streams"
+    }
+}
