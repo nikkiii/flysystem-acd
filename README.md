@@ -45,7 +45,9 @@ $response = $drive->getAccount()->authorize($url);
 // Initialize Node
 Node::init($drive->getAccount(), $cache);
 
-// Now you can use the AmazonCloudDrive adapter
+$flysystem = new Filesystem(new AmazonCloudDrive($drive));
+
+// Access flysystem like usual
 ```
 
 Repeat usage would be simpler (no authentication url)
