@@ -2,12 +2,6 @@
 
 This is an [Amazon Cloud Drive](https://www.amazon.com/clouddrive) adapter for [Flysystem](http://flysystem.thephpleague.com/).
 
-## Requirements
-
-This requires an updated version of alex-phillips/clouddrive-php (which is pending, the 'streams' pull request)
-
-Until then, composer.json includes a repository entry to override it.
-
 ## Installation
 
 Composer is the best way, as with all of Flysystem!
