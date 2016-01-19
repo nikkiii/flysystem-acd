@@ -39,6 +39,9 @@ $response = $drive->getAccount()->authorize($url);
 // Initialize Node
 Node::init($drive->getAccount(), $cache);
 
+// Sync your local cache with the current state of your Cloud Drive.
+$drive->getAccount()->sync();
+
 $flysystem = new Filesystem(new AmazonCloudDrive($drive));
 
 // Access flysystem like usual
@@ -66,6 +69,9 @@ if (!$response['success']) {
 
 // Initialize Node
 Node::init($drive->getAccount(), $cache);
+
+// Sync your local cache with the current state of your Cloud Drive.
+$drive->getAccount()->sync();
 
 $flysystem = new Filesystem(new AmazonCloudDrive($drive));
 
