@@ -2,12 +2,6 @@
 
 This is an [Amazon Cloud Drive](https://www.amazon.com/clouddrive) adapter for [Flysystem](http://flysystem.thephpleague.com/).
 
-## Requirements
-
-This requires an updated version of alex-phillips/clouddrive-php (which is pending, the 'streams' pull request)
-
-Until then, composer.json includes a repository entry to override it.
-
 ## Installation
 
 Composer is the best way, as with all of Flysystem!
@@ -45,6 +39,9 @@ $response = $drive->getAccount()->authorize($url);
 // Initialize Node
 Node::init($drive->getAccount(), $cache);
 
+// Sync your local cache with the current state of your Cloud Drive.
+$drive->getAccount()->sync();
+
 $flysystem = new Filesystem(new AmazonCloudDrive($drive));
 
 // Access flysystem like usual
@@ -72,6 +69,9 @@ if (!$response['success']) {
 
 // Initialize Node
 Node::init($drive->getAccount(), $cache);
+
+// Sync your local cache with the current state of your Cloud Drive.
+$drive->getAccount()->sync();
 
 $flysystem = new Filesystem(new AmazonCloudDrive($drive));
 
