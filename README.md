@@ -20,6 +20,8 @@ Initial setup would be something like this:
 use CloudDrive\Cache\SQLite;
 use CloudDrive\CloudDrive;
 use CloudDrive\Node;
+use League\Flysystem\Filesystem;
+use Nikkii\Flysystem\ACD\AmazonCloudDrive;
 
 $cache = new SQLite('email', './cache');
 
@@ -50,11 +52,11 @@ $flysystem = new Filesystem(new AmazonCloudDrive($drive));
 Repeat usage would be simpler (no authentication url)
 
 ```php
-use League\Flysystem\Filesystem;
-use Nikkii\Flysystem\ACD\AmazonCloudDrive;
 use CloudDrive\Cache\SQLite;
 use CloudDrive\CloudDrive;
 use CloudDrive\Node;
+use League\Flysystem\Filesystem;
+use Nikkii\Flysystem\ACD\AmazonCloudDrive;
 
 $cache = new SQLite('email', './cache');
 
