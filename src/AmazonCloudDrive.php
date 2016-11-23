@@ -279,8 +279,6 @@ class AmazonCloudDrive extends AbstractAdapter {
 			}
 		}
 
-		print_r($output);
-
 		return $output;
 	}
 
